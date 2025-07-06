@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPER - MMA Fighting Gear</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent: #FF00FF;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        .glitch {
+            text-shadow: 2px 2px var(--accent);
+            animation: glitch 2s infinite;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        .scroll-container {
+            scrollbar-width: none;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-50 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold glitch">HYPER</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#products" class="hover:text-pink-500 transition">Products</a>
+                <a href="#about" class="hover:text-pink-500 transition">About</a>
+                <a href="#contact" class="hover:text-pink-500 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 glitch">DOMINATE</h1>
+            <p class="text-xl md:text-2xl mb-8">START OF A NEW ERA</p>
+            <button class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full transition">
+                Explore Our Products
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">WHY WE CREATED HYPER</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&q=80" 
+                     class="rounded-lg" alt="Team">
+                <p class="text-gray-300">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">OUR PRODUCTS</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Cards -->
+                <div class="card bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80" alt="MMA Shorts">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">Pink Blast MMA Fighting Shorts</h3>
+                        <p class="text-pink-500">₹1500</p>
+                    </div>
+                </div>
+                <!-- Repeat for other products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">OUR BLOGS</h2>
+            <div class="scroll-container flex overflow-x-auto space-x-6">
+                <div class="flex-none w-80">
+                    <img src="https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&q=80" 
+                         class="rounded-lg mb-4" alt="Blog">
+                    <p class="text-sm text-gray-300">The future of MMA gear design</p>
+                </div>
+                <!-- Repeat for other blog cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="space-y-6">
+                <div class="faq-item py-4">
+                    <button class="w-full text-left font-bold flex justify-between items-center">
+                        Shipping Information
+                        <i class="bi bi-plus"></i>
+                    </button>
+                </div>
+                <!-- Repeat for other FAQs -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Start A Project?</h2>
+            <button class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full transition">
+                GET IN TOUCH
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center text-gray-500">
+                <p>© 2023 HYPER. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const icon = button.querySelector('i');
+                icon.classList.toggle('bi-plus');
+                icon.classList.toggle('bi-dash');
+                const content = button.nextElementSibling;
+                if (content) {
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                }
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
